@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.12)
+project(test_llvm_max3)
+add_subdirectory(googletest)
+include_directories(googletest/include) 
+add_executable(testMax3 test_max3.cpp max3.o)
+target_link_libraries(testMax3 PRIVATE gtest)
